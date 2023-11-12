@@ -1,0 +1,7 @@
+folder_in: /home/vboxuser/tst
+folder_out: /home/vboxuser/out
+folder_ext: /home/vboxuser/folder1
+folder_ext2: /home/vboxuser/folder2
+
+count: 5
+bs: 1M
