@@ -79,22 +79,3 @@ def get_last_load_average():
     with open("/proc/loadavg", "r") as loadavg_file:
         lines = loadavg_file.readlines()
         return lines[-1].strip() if lines else "N/A"
-
-# @pytest.fixture(autouse=True)
-# def write_stat(request):
-#     with open("stat.txt", "a") as stat_file:
-#         current_time = time.strftime("%Y-%m-%d %H:%M:%S")
-#         stat_line = f"{current_time}, {data['count']}, {data['bs']}, {get_last_load_average()}\n"
-#         stat_file.write(stat_line)
-
-
-# @pytest.fixture(autouse=True, scope="module")
-# def start_time():
-#     return datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-#
-#
-# # primer kak mojno sdelat'
-# @pytest.fixture(scope="module")
-# def safe_log(stat.txt, starttime):
-#     with open(stat.txt,, 'w') as f:
-#         f.write(ssh_get("0.0.0.0", "user2", "1111", "journalctl --since".format(starttime)))
