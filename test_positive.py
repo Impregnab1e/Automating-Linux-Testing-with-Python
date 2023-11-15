@@ -61,10 +61,10 @@ class TestPositive:
     def test_step8(self):
         # test8
         archive_path = "arx2.7z"
-        cmd_crc32 = 'cd {} && crc32 {}'.format(data["folder_out"], archive_path)
-        cmd_7z = 'cd {} && 7z h {}'.format(data["folder_out"], archive_path)
+        cmd_crc32 = "cd {} && crc32 {}".format(data["folder_out"], archive_path)
+        cmd_7z = "cd {} && 7z h {}".format(data["folder_out"], archive_path)
 
         result1 = ssh_checkout("0.0.0.0", "user2", "1111", cmd_crc32, "")
         result2 = ssh_checkout("0.0.0.0", "user2", "1111", cmd_7z, "")
 
-        assert result1 == result2, f'Test8 Fail. Hash mismatch. CRC32: {result1}, 7z: {result2}'
+        assert result1 == result2, f"test8 FAIL. Hash mismatch. CRC32: {result1}, 7z: {result2}"
